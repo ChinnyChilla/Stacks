@@ -9,13 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        ZStack {
+            Color.white
+            LinearGradient(gradient: Gradient(colors: [.blue, .pink]), startPoint: .top, endPoint: .bottom)
+            VStack {
+                Text("HomeScreen")
+                    .font(.system(size: 32, weight:  .medium, design: .default))
+                    .foregroundStyle(Color.white)
+                    .padding(5)
+                Spacer()
+            }
+            VStack {
+                Text("Add")
+                    .font(.system(size: 20, weight:  .medium, design: .default))
+                    .foregroundStyle(Color.white)
+                    .padding(.leading)
+                    .padding(.top, 320)
+                    
+            }
+            VStack {
+                Image(systemName: "list.bullet")
+                    .font(.system(size: 20, weight:  .medium, design: .default))
+                    .foregroundStyle(Color.white)
+                    .padding(.top, -150)
+                    .padding(.horizontal, -275)
+                    
+                    
+                    
+                }
+                    
+            }
     }
 }
 

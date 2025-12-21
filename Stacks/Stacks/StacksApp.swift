@@ -12,6 +12,11 @@ struct StacksApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            Button("Button") {
+                print("i am pressed")
+                    }
+                }
+            }
         }
-    }
-}
+    
+
