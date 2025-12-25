@@ -10,29 +10,35 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.white
-            LinearGradient(gradient: Gradient(colors: [.blue, .pink]), startPoint: .top, endPoint: .bottom)
+            Color.black
+                .ignoresSafeArea()
             VStack {
                 Text("HomeScreen")
                     .font(.system(size: 32, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.gray)
                     .padding(5)
+                VStack{
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(width: 10000, height: 1)
+                }
                 Spacer()
             }
             VStack {
-                Text("Add")
+                Button("Add"){
+                    print("pressed")}
                     .font(.system(size: 20, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.gray)
                     .padding(.leading)
-                    .padding(.top, 320)
+                    .padding(.top, 740)
                     
             }
             VStack {
                 Image(systemName: "list.bullet")
-                    .font(.system(size: 20, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.white)
-                    .padding(.top, -150)
-                    .padding(.horizontal, -275)
+                    .font(.system(size: 35, weight:  .medium, design: .default))
+                    .foregroundStyle(Color.gray)
+                    .padding(.top, -378)
+                    .padding(.horizontal, -190)
                     
                     
                     
