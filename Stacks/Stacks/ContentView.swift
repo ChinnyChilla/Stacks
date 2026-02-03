@@ -9,45 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            VStack {
-                Text("HomeScreen")
-                    .font(.system(size: 32, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.gray)
-                    .padding(5)
-                VStack{
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 10000, height: 1)
-                }
-                Spacer()
-            }
-            VStack {
-                Button("Add"){
-                    print("pressed")}
-                    .font(.system(size: 20, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.gray)
-                    .padding(.leading)
-                    .padding(.top, 740)
-                    
-            }
-            VStack {
-                Image(systemName: "list.bullet")
-                    .font(.system(size: 35, weight:  .medium, design: .default))
-                    .foregroundStyle(Color.gray)
-                    .padding(.top, -378)
-                    .padding(.horizontal, -190)
-                    
-                    
+        NavigationStack {
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
+                VStack {
+                    Text("HomeScreen")
+                        .font(.system(size: 32, weight:  .medium, design: .default))
+                        .foregroundStyle(Color.gray)
+                        .padding(5)
+                    VStack{
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .frame(width: 10000, height: 1)
+                    }
+                    Spacer()
                     
                 }
-                    
-            }
-    }
-}
+                
+                VStack {
+                    NavigationLink(destination: CalanderPage()){
+                            Text("Calendar")
+                                .font(.system(size: 32, weight:  .medium, design: .default))
+                                .foregroundStyle(Color.gray)
+                                .padding(.top, 700)
 
-#Preview {
-    ContentView()
-}
+                                
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+
+    
+    #Preview {
+        ContentView()
+    }
+
